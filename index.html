@@ -1,15 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <title>Recuperación</title>
+    <link href="bootstrap/bootstrap.css" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-    <h1>Recuperación Aplicaciones Web</h1>
 
-    <script src="js/recuperación2.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<body class="container mt-5">
+    <div class="card mx-auto" style="max-width: 800px; background-color: rgba(145, 187, 181, 0.849);">
+        <div class="card-header text-center">
+            <br>
+            <h1 class="h2" style="color: rgb(39, 39, 82);"><strong>Evaluar Ecuación General de 2° Grado</strong></h1>
+            <h3 class="h6" style="color: rgb(61, 68, 78);">Ramírez López Marilú</h3>
+            <div class="card-body">
+                <div id="formulario">
+                    <form id="coeficientesForm">
+                        <div class="form-group h6">
+                            <label for="coeficienteA"><strong>Coeficiente a:</strong></label>
+                            <input type="number" class="form-control" id="coeficienteA" required>
+                        </div>
+                        <div class="form-group h6">
+                            <label for="coeficienteB"><strong>Coeficiente b:</strong></label>
+                            <input type="number" class="form-control" id="coeficienteB" required>
+                        </div>
+                        <div class="form-group h6">
+                            <label for="coeficienteC"><strong>Coeficiente c:</strong></label>
+                            <input type="number" class="form-control" id="coeficienteC" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Evaluar</button>
+                    </form>
+                </div>
+
+                <div id="resultado" class="hidden h6">
+                    <br>
+                    <h2 class="h4"><strong>Resultados</strong></h2>
+                    <table class="table table-success table-striped table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Coeficiente a</th>
+                                <th>Coeficiente b</th>
+                                <th>Coeficiente c</th>
+                                <th>x1</th>
+                                <th>x2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="resultRow">
+                                <td id="resA"></td>
+                                <td id="resB"></td>
+                                <td id="resC"></td>
+                                <td id="resX1"></td>
+                                <td id="resX2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="mensaje" class="text-danger text-center" ></p>
+                    <button id="regresarBtn" class="btn btn-secondary bs-success-rgb">Regresar</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/recuperación2.js"></script>
 </body>
+
 </html>
